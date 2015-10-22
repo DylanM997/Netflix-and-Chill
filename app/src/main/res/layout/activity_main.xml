@@ -56,7 +56,7 @@
              android:layout_height="match_parent"
              android:layout_width="0dp"
              android:layout_weight="1"
-             android:src="@drawable/"
+             android:src="@drawable/mar"
              android:scaleType="centerCrop"
              android:background="@android:color/black"
              />
@@ -85,7 +85,7 @@
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:src="@drawable/"
+            android:src="@drawable/crim"
             android:scaleType="centerCrop"
             android:background="@android:color/black"
             />
