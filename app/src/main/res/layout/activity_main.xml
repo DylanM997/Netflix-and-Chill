@@ -44,7 +44,7 @@
                 android:id="@+id/movie1"
                 android:layout_height="275dp"
                 android:layout_width="180dp"
-                android:layout_below="@id/movie3"
+                android:layout_below="@+id/movie3"
                 android:layout_weight="1"
                 android:src="@drawable/mar"
                 android:scaleType="centerCrop"
