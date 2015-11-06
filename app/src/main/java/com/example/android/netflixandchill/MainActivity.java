@@ -9,8 +9,13 @@ import android.os.Bundle;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import java.net.URLConnection;
+import java.net.HttpURLConnection;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 import com.squareup.picasso.Picasso;
 
@@ -24,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         grid = (GridView) findViewById(R.id .gridView);
         grid.setAdapter(new ImageAdapter(this));
-
 
     }
 
