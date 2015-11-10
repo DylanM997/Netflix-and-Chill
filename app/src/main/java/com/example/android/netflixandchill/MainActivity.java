@@ -15,7 +15,8 @@ import android.widget.TextView;
 import java.net.URLConnection;
 import java.net.HttpURLConnection;
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.BufferedInputStream;
+import java.io.InputStream;
 
 import com.squareup.picasso.Picasso;
 
@@ -30,6 +31,21 @@ public class MainActivity extends AppCompatActivity {
         grid = (GridView) findViewById(R.id .gridView);
         grid.setAdapter(new ImageAdapter(this));
 
+    }
+
+    public String getData()
+    {
+        HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+        try {
+            InputStream in = new BufferedInputStream(urlConnection.getInputStream());
+            if (!url.getHost().equals(urlConnection.getURL().getHost())) {
+                // we were redirected! Kick the user out to the browser to sign on?
+
+
+            } finally {
+                urlConnection.disconnect();
+            }
+        }
     }
 
     @Override
