@@ -20,13 +20,12 @@ import java.net.HttpURLConnection;
 import java.io.BufferedReader;
 import java.io.BufferedInputStream;
 import java.io.InputStream;
-
+import java.io.InputStreamReader;
 import com.squareup.picasso.Picasso;
 
 
 public class MainActivity extends AppCompatActivity {
     GridView grid;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
