@@ -43,21 +43,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public String getData()
-    {
-        HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-        try {
-            InputStream in = new BufferedInputStream(urlConnection.getInputStream());
-            if (!url.getHost().equals(urlConnection.getURL().getHost())) {
-                // we were redirected! Kick the user out to the browser to sign on?
-
-
-            } finally {
-                urlConnection.disconnect();
-            }
-        }
-    }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
