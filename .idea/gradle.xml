@@ -5,8 +5,14 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
         <option name="gradleHome" value="$APPLICATION_HOME_DIR$/gradle/gradle-2.4" />
         <option name="gradleJvm" value="1.8" />
+||||||| merged common ancestors
+        <option name="gradleJvm" value="1.8" />
+=======
+        <option name="gradleJvm" value="1.7" />
+>>>>>>> 1db9e12cda5cd3b18105204136121ca327a2fa51
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />

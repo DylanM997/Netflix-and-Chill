@@ -1,20 +1,15 @@
 package com.example.android.netflixandchill;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.app.Activity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
+<<<<<<< HEAD
 import java.net.URLConnection;
 import java.net.HttpURLConnection;
 import java.io.BufferedReader;
@@ -23,26 +18,36 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import com.squareup.picasso.Picasso;
 
+||||||| merged common ancestors
+import java.net.URLConnection;
+import java.net.HttpURLConnection;
+import java.io.BufferedReader;
+import java.io.InputStreamReader; 
+
+import com.squareup.picasso.Picasso;
+
+=======
+>>>>>>> 1db9e12cda5cd3b18105204136121ca327a2fa51
 
 public class MainActivity extends AppCompatActivity {
     GridView grid;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        grid = (GridView) findViewById(R.id.gridView);
-        grid.setAdapter(new ImageAdapter(this));
-        grid.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        GridView gridview = (GridView) findViewById(R.id.gridView);
+        gridview.setAdapter(new ImageAdapter(this));
+
+        gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
                 Toast.makeText(MainActivity.this, "" + position,
                         Toast.LENGTH_SHORT).show();
             }
         });
-
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
