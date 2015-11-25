@@ -36,10 +36,11 @@ public class ImageAdapter extends BaseAdapter {
 
             StrictMode.setThreadPolicy(policy);
             jsonArray();
-        }
 
+        }
+        private int count;
         public int getCount() {
-            return 2;
+            return count;
         }
 
         public Object getItem(int position) {
@@ -73,7 +74,6 @@ public class ImageAdapter extends BaseAdapter {
                     // posterPath =" http://image.tmdb.org/t/p/w185/"+ data.getJSONObject(position).getString("poster_path");
                     Picasso.with(Context)
                             .load(posterPath)
-
                             .into(imageView);
                 }
             }
@@ -94,13 +94,14 @@ public class ImageAdapter extends BaseAdapter {
                 JSONArray array = json.getJSONArray("results");
 
                 data = array;
+                this.count = array.length();
                 for (int i = 0; i < array.length(); i++){
                     JSONObject movie = array.getJSONObject(i);
                     posterPaths.add(movie.getString("poster_path"));
                     System.out.println(posterPaths);
 
                     String s = array.get(i).toString();
-                    Log.i("array",s);
+                    Log. i("array",s);
                     Log.i(" poster",array.getJSONObject(i).getString("poster_path"));
 
 
@@ -109,6 +110,18 @@ public class ImageAdapter extends BaseAdapter {
             catch(IOException | JSONException ex) {
                 Log.i("ImageAdapter","Error");
             }
+        }
+        ArrayList<String> infoArray = new ArrayList<String>();
+        public void getDataFromJson(String info)
+        {
+            for (int i = 0; i < data.length(); i++){
+                try{
+                JSONObject movie = data.getJSONObject(i);
+                infoArray.add(movie.getString(info));
+                }
+                catch(JSONException e){}
+            }
+
         }
         public JSONObject readJson(String url) throws IOException, JSONException {
             InputStream stream = new URL(url).openStream();
