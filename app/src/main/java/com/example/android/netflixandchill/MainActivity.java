@@ -1,4 +1,4 @@
-package com.example.android.netflixandchill;
+ package com.example.android.netflixandchill;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
         GridView gridview = (GridView) findViewById(R.id.gridView);
         gridview.setAdapter(new ImageAdapter(this));
-
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
