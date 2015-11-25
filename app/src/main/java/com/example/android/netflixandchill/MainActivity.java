@@ -9,7 +9,6 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
-<<<<<<< HEAD
 import java.net.URLConnection;
 import java.net.HttpURLConnection;
 import java.io.BufferedReader;
@@ -18,7 +17,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import com.squareup.picasso.Picasso;
 
-||||||| merged common ancestors
 import java.net.URLConnection;
 import java.net.HttpURLConnection;
 import java.io.BufferedReader;
@@ -26,8 +24,7 @@ import java.io.InputStreamReader;
 
 import com.squareup.picasso.Picasso;
 
-=======
->>>>>>> 1db9e12cda5cd3b18105204136121ca327a2fa51
+
 
 public class MainActivity extends AppCompatActivity {
     GridView grid;
